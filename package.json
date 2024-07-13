@@ -1,0 +1,68 @@
+{
+  "name": "luanolidev-bot-musica",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build:dev": "tsc --noEmit && echo ✔ Ok",
+    "build": "tsc",
+    "dev": "tsx --env-file .env ./src/index.ts",
+    "dev:dev": "tsx --env-file .env.development ./src/index.ts",
+    "watch": "tsx --watch --env-file .env ./src/index.ts",
+    "watch:dev": "tsx --watch --env-file .env.development ./src/index.ts",
+    "start": "node --env-file .env ./dist/index.js",
+    "start:dev": "node --env-file .env.development ./dist/index.js"
+  },
+  "dependencies": {
+    "@discord-player/extractor": "^4.4.7",
+    "@evan/opus": "^1.0.3",
+    "@magicyan/discord": "^1.0.31",
+    "chalk": "^5.3.0",
+    "consola": "^3.2.3",
+    "discord-player": "^6.6.8",
+    "discord.js": "^14.15.2",
+    "fast-glob": "^3.3.2",
+    "ytdl-core": "^4.11.5",
+    "zod": "^3.23.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "ffmpeg-static": "^5.2.0",
+    "tsx": "^4.9.3",
+    "typescript": "^5.4.5"
+  },
+  "imports": {
+    "#base": [
+      "./dist/discord/base/index.js"
+    ],
+    "#settings": [
+      "./dist/settings/index.js"
+    ],
+    "#database": [
+      "./dist/database/index.js"
+    ],
+    "#functions": [
+      "./dist/functions/index.js"
+    ],
+    "#classes": [
+      "./dist/classes/index.js"
+    ],
+    "#tools": [
+      "./dist/tools/index.js"
+    ],
+    "#menus": [
+      "./dist/menus/index.js"
+    ],
+    "#tasks": [
+      "./dist/tasks/index.js"
+    ],
+    "#forms": [
+      "./dist/forms/index.js"
+    ],
+    "#lang/*": [
+      "./lang/*"
+    ]
+  }
+}
